@@ -1,4 +1,63 @@
 package ficha1;
 
+import java.util.Scanner;
+
+/**
+        * Nesta classe, temos a nossa função main, responsável por
+        * aceder à porção computacional, porque é static e, por isso
+        * acede aos métodos static estabelecidos na outra classe.
+        * @author (Diogo Rebelo)
+ * @version (1.0)
+ */
+
 public class TestePrograma {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        Ficha1 f = new Ficha1();
+
+        //Colocar as funções que não são para executar em comentário, para não gera erro!
+        //1
+        System.out.println("Insira o valor de temperatura em graus Celsius: ");
+        double tc = input.nextDouble();
+        double tf = f.celsiusParaFarenheit(tc);
+        System.out.println("A temperatura convertida para Farenheit é: " + tf);
+
+        /*
+        //2
+        System.out.println("Insira os dois inteiros: ");
+        int one = input.nextInt();
+        int two = input.nextInt();
+        int max = f.maximoNumeros(one,two);
+        System.out.println("O máximo é: " + max);
+
+        //3
+        System.out.println("Insira o nome: ");
+        String nome = input.toString();
+        System.out.println("Insira o respetivo saldo: ");
+        double saldo = input.nextDouble();
+        String dados = f.criaDescricaoConta(nome,saldo);
+        System.out.println(dados);
+
+        //4
+        System.out.println("Insira o valor em euros e a respetiva taxa de conversão: ");
+        double valor = input.nextDouble();
+        double taxa = input.nextDouble();
+        double libras = f.eurosParaLibras(valor,taxa);
+        System.out.println("O valor convertido é: " + libras);
+
+        //5
+        System.out.println("Insira os dois inteiros: ");
+        int one1 = input.nextInt();
+        int two1 = input.nextInt();
+        String average = f.descrescenteMedia(one1,two1);
+        System.out.println(average);
+
+        //6
+        if (args.length==1)
+            System.out.println("O factorial desse número é: " + f.factorial(Integer.parseInt(args[0])));
+
+        //7
+        System.out.println("Tempo gasto: " + f.tempoGasto());
+         */
+    }
 }
