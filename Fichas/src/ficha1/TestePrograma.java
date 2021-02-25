@@ -77,6 +77,7 @@ public class TestePrograma {
 
             default:
                 System.out.println("Input inválido.");
+
         }
     }
 }

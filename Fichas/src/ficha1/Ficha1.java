@@ -50,5 +50,6 @@ public class Ficha1 {
         long fact2 = factorial(5000);
         long finish_time = System.currentTimeMillis();
         return finish_time - start_time;
+        //o tempo vai dar sempre 0, pois a diferença é mínima, poderíamos ler em nanosegundos!
     }
 }
