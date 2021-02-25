@@ -1,5 +1,4 @@
 package ficha1;
-
 import java.util.Scanner;
 
 /**
@@ -11,53 +10,73 @@ import java.util.Scanner;
  */
 
 public class TestePrograma {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Ficha1 f = new Ficha1();
 
-        //Colocar as funções que não são para executar em comentário, para não gera erro!
-        //1
-        System.out.println("Insira o valor de temperatura em graus Celsius: ");
-        double tc = input.nextDouble();
-        double tf = f.celsiusParaFarenheit(tc);
-        System.out.println("A temperatura convertida para Farenheit é: " + tf);
+        System.out.println("Introduza o nº da pergunta: ");
+        int pergunta = input.nextInt();
+        input.nextLine();
 
-        /*
-        //2
-        System.out.println("Insira os dois inteiros: ");
-        int one = input.nextInt();
-        int two = input.nextInt();
-        int max = f.maximoNumeros(one,two);
-        System.out.println("O máximo é: " + max);
+        switch (pergunta) {
+            case 1:
+                //1
+                System.out.println("Insira o valor de temperatura em graus Celsius: ");
+                double tc = input.nextDouble();
+                double tf = f.celsiusParaFarenheit(tc);
+                System.out.println("A temperatura convertida para Farenheit é: " + tf);
+                break;
 
-        //3
-        System.out.println("Insira o nome: ");
-        String nome = input.toString();
-        System.out.println("Insira o respetivo saldo: ");
-        double saldo = input.nextDouble();
-        String dados = f.criaDescricaoConta(nome,saldo);
-        System.out.println(dados);
+            case 2:
+                //2
+                System.out.println("Insira os dois inteiros: ");
+                int one = input.nextInt();
+                int two = input.nextInt();
+                int max = f.maximoNumeros(one, two);
+                System.out.println("O máximo é: " + max);
+                break;
 
-        //4
-        System.out.println("Insira o valor em euros e a respetiva taxa de conversão: ");
-        double valor = input.nextDouble();
-        double taxa = input.nextDouble();
-        double libras = f.eurosParaLibras(valor,taxa);
-        System.out.println("O valor convertido é: " + libras);
+            case 3:
+                //3
+                System.out.println("Insira o nome: ");
+                String nome = input.toString();
+                System.out.println("Insira o respetivo saldo: ");
+                double saldo = input.nextDouble();
+                String dados = f.criaDescricaoConta(nome, saldo);
+                System.out.println(dados);
+                break;
 
-        //5
-        System.out.println("Insira os dois inteiros: ");
-        int one1 = input.nextInt();
-        int two1 = input.nextInt();
-        String average = f.descrescenteMedia(one1,two1);
-        System.out.println(average);
+            case 4:
+                //4
+                System.out.println("Insira o valor em euros e a respetiva taxa de conversão: ");
+                double valor = input.nextDouble();
+                double taxa = input.nextDouble();
+                double libras = f.eurosParaLibras(valor, taxa);
+                System.out.println("O valor convertido é: " + libras);
+                break;
 
-        //6
-        if (args.length==1)
-            System.out.println("O factorial desse número é: " + f.factorial(Integer.parseInt(args[0])));
+            case 5:
+                //5
+                System.out.println("Insira os dois inteiros: ");
+                int one1 = input.nextInt();
+                int two1 = input.nextInt();
+                String average = f.descrescenteMedia(one1, two1);
+                System.out.println(average);
+                break;
 
-        //7
-        System.out.println("Tempo gasto: " + f.tempoGasto());
-         */
+            case 6:
+                //6
+                if (args.length==0) System.out.println("Não foi dado argumento!");
+                System.out.println("O factorial desse número é: " + f.factorial(Integer.parseInt(args[0])));
+                break;
+
+            case 7:
+                //7
+                System.out.println("Tempo gasto: " + f.tempoGasto());
+                break;
+
+            default:
+                System.out.println("Input inválido.");
+        }
     }
 }
