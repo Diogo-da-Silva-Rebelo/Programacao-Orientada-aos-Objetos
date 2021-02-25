@@ -73,7 +73,7 @@ public class TestePrograma {
 
                 case 7:
                     //7
-                    System.out.println("Tempo gasto: " + (f.tempoGasto() / 100000.0) + " ms");
+                    System.out.println("Tempo gasto: " + (f.tempoGasto() / 100000.0) + " ns");
                     break;
 
                 default:
