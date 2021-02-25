@@ -1,4 +1,5 @@
 package ficha1;
+import java.time.LocalDateTime;
 
 /* Classe que contém cada um dos métodos dos exercícios solicitados,
 ou seja, cada método pode ser visto como uma função diferente, que
@@ -46,9 +47,9 @@ public class Ficha1 {
     }
 
     public long tempoGasto() {
-        long start_time = System.currentTimeMillis();
+        long start_time = LocalDateTime.now().getNano();
         long fact2 = factorial(5000);
-        long finish_time = System.currentTimeMillis();
+        long finish_time = LocalDateTime.now().getNano();
         return finish_time - start_time;
         //o tempo vai dar sempre 0, pois a diferença é mínima, poderíamos ler em nanosegundos!
     }
