@@ -1,0 +1,78 @@
+Conceitos Principais:
+- Objeto: representação computacional de algo/entidade. É constituido por:
+    -> atributos;
+    -> é independente do contexto (pode ser reutilizado);
+    -> garante abstração de dados;
+    -> permite encapsulamento e modularidade (composição);
+    -> cada objeto é único (objetos podem ser iguais, mas tem uma identidade diferente);
+    -> tem atributos privados (estado);
+    -> têm um comportamento;
+    -> estes três últimos pontos definem aquilo que é um objeto!
+
+- Aos dados chamaremos variáveis de instância;
+- À operações chamaremos métodos de instância;
+- De uma forma gráfica, o encapsulamento pode ser visto como uma cápsula, que assegura a proteção de dados internos.
+
+Imaginando um quadro, temos:
+ -> 1.variáveis de instância (privados);
+ -> 2.métodos de instância públicos (funções computacionais);
+ -> 3.métodos de instância privados;
+- A interação entre objetos é feita com envio de mensagens (pedido de execução de um método e resposta com o retorno).
+
+O objeto só acede à API que o objeto 2 disponibilizar. Normalmente, quando queremos que um objeto faça qualquer coisa
+utilizamos sempre "frases":
+ -> objeto.m(); [colocamos o nome dado ao objeto] . [o que queremos que faça/retorne]
+ -> objeto.m(argl,...,argn); [objeto] . [ação com argumentos]
+ -> r=objeto.m();
+ -> r=objetvo.m(argl,...,argn); [Casos com retorno com e sem argumentos]
+ATENÇÃO: Não podemos aceder diretamente a variáveis de outros métodos!
+Ex: Não devemos inicializar variáveis usando objeto.var=NULL;
+Ex: Não devemos alterar diretamente variáveis, para isso, criamos um método que faz isso por nós e que já não acede
+diretamente a dados. Isto permite a existência de encapsulamento.
+
+- Objetos similares são definidos sempre no mesmo local (classe);
+
+- Classe: Local de definição comum a todos os objetos. A classe é um objeto, mas é de um tipo especial, tem o comporta
+mento, estado de um objeto. Pode ser visto como um padrão, um TIPO DE DADOS ABSTRATO. A classe existe primeiro que o
+objeto e é única! (Ex: a classe "carro" existe antes dos carros e é mais abrangente que o que a compõe!- instância).
+Reúne as características dos objetos que a compõem. O seu nome nunca depende dos objetos, é um nome bem definido. Assim,
+um objeto não é uma classe, mas uma classe é um objeto.
+- Por natureza, não misturamos "alhos com bugalhos", ou seja, objetos sem os mesmos atributos e com um comportamento di
+ferente não podem fazer parte da mesma classe!
+
+- Definição de uma classe:
+ -> identificar variáveis de instância (objetos);
+ -> identificar o conjunto de operações;
+- Ex: definição da classe "Ponto":
+      public class Ponto {
+      //variáveis de instância (objetos)
+      private int x;
+      private int y;
+      //Encapsulamento
+
+      //Construtores
+      this = objeto que cria a mensagem
+      // Ponto sem parâmetros:
+      public Ponto(int cx, int cy){
+      this.x = 0;
+      this.y = 0;
+      }
+
+      //Ponto com parâmetros:
+      public Pont(int cx, int cy){
+      this.x = cx;
+      this.y = cy;
+      }
+      // this.x = é a variável x do objeto que recebe a mensagem!
+
+      //Cópia do ponto:
+      public Ponto(Ponto umPonto){
+      this.x = umPonto.getX();
+      this.y = umPonto.getY();
+      }
+
+- A classe "Ponto" pode ser mais complexa, então, podemos definir mais métodos dentro desta classe. Em instâncias
+private, guardam-se os valores dessas variáveis.
+
+- Set x/y: update da coordenada em x e y;
+- Get x/y: obtém coordenadas de x ou y;
