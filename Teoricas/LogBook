@@ -114,3 +114,56 @@ private, guardam-se os valores dessas variáveis.
 
 - Set x/y: update da coordenada em x e y;
 - Get x/y: obtém coordenadas de x ou y;
+
+POO T - 1 mar
+- Temos quantos construtures nós queiramos. Ainda no contexto da aula anterior;
+- Os construtores têm o nome da classe a que pertencem;
+- Um construtor de cópia permite criar um novo objeto do objeto passado como parâmetro;
+- Considere-se o acesso direto aos dados (que não deve ser feito!):
+
+ //Cópia do ponto:
+      public Ponto(Ponto umPonto){
+      this.x = umPonto.x [acedemos diretamente à coordenada x]
+      this.y = umPonto.y [acedemos diretamente à coordenada y]
+      }
+
+- Podemos ter dois objetos iguais, todavia, são objetos distintos!! Têm identidades/apontadores distintos.
+- Existência de métodos de instância = funcionalidades dos dados.
+    -> É o caso de:
+        -> Getx(...);
+        -> Gety(...);
+        -> Setx(...);
+        -> Sety(...); //atualizar coordenada com a que é passada.
+        -> Deslocamento(...);
+        -> somaPonto(...);
+        -> movePonto(...);
+        -> ePositivo(...);
+        -> distancia(...) : determina a distância entre o this e o ponto passado como parâmetro! Todos os métodos se
+        se enviam a um objeto:
+
+        public double distancia(Ponto umPonto){
+        return Math.sqrt(Math.pow(this.x - umPonto(), 2) + (Math.pow(this.y - umPonto.gety(), 2);
+        }
+- O código de um método é sempre executado no contexto do this. O método é sempre executado pelo objeto que recebeu a
+mensagem;
+
+- Tipos de Modificadores:
+    -> public - método acessivel a partir de qualquer classe;
+    -> private - apenas acessível dentro dessa classe específica;
+    -> protected - acessível nesse classe, ou classes dentro do mesmo package ou suclasses;
+    -> default - acessível a partir da classe ou de classe dentro desse package (subclasses não estão incluidas);
+
+- Forma de garantir encapsulamento, as variàveis de instância devem ser privadas!
+- Como fazer programas por objetos??
+    -> Análise de requisitos;
+    -> Determinar classes a construir;
+    -> Fazer modelo do sistema;
+    -> Ver arquitetura de classes;
+
+- Dependência: quando - Nome da clase uma classe precisa de um objetp de tipo de outra classe, há uma relação unidirecional (Gestor de
+aulas dá acesso à Sala).
+- Não devemos repetir associações nos atributos!!
+
+Introdução aos arrays em java:
+- Um array que contém em cada posição um aluno. O array será Aluno alunos[];
+- Há composição quando uma parte está incluida ou faz parte de outra (losango de composição).
