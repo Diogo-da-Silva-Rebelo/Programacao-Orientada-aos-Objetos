@@ -1,4 +1,42 @@
 Conceitos Principais:
+
+POO T - 19 fev
+- Apresentação:
+    -> Teste teórico: 21/05/2021;
+    -> Exame: 14/06/2021;
+    -> Projeto: entrega eletrónica dia 12/06/2021;
+    -> Apresentação do projeto previstas para 21/06 até 26/06;
+    -> Entrega de 2 exercícios das fichas;
+    -> Perguntas em aulas TP e T (1 por aula teórica);
+
+- Projeto:
+    -> Grupos de 3 elementos, com relatório final;
+
+POO T - 22 fev
+- Estratégia predefinida "Top down": no início tudo é pouco definido, e por refinamento, vão-se encontrando mais detalhes.
+Neste modelo, temos:
+    -> Classe I: Algoritmos;
+    -> Classe II: Estruturas de dados;
+    -> As duas classes formam os nossos Programas;
+
+- A manutenção corretiva de programas reutilizados é muito mais trabalhosa e menos produtiva. Para melhorar, podemos:
+    -> Utilizar apontadores para qualquer coisa (*void), nos nossos tipos de dados;
+    -> Passar o tamanho do nodo (célula) do tipo de dados a utilizar;
+    -> Passar funções específicas a utilizar, como parâmetros (remove cabeça, comparação, etc.);
+    -> Assim, ao alterarmos os tipos de dados, não há problemas no nosso código.
+
+- Encapsulamento: Não devemos aceder diretamente aos dados, mas sim, às funcionalidades usadas com esses dados. No fundo,
+usando API, apenas sabemos a interface e a implementação está "escondida".
+
+- Métodos:
+    -> Criar módulo com o tipo de dados a manipular;
+    -> Criar dentro desse módulo as estruturas de dados e as funcionalidades que acedem a esses dados;
+    -> definir as operações de acesso a dados internos;
+    -> definir as operações de acesso a dados externos;
+    -> Não ter código de IO nas operações;
+    -> Ao utilizar os módulos, utilizar apenas a API.
+
+POO TP - 24 fev
 - Objeto: representação computacional de algo/entidade. É constituido por:
     -> atributos;
     -> é independente do contexto (pode ser reutilizado);
