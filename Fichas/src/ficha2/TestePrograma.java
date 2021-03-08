@@ -40,7 +40,43 @@ public class TestePrograma {
 
                 case 2:
                     //2
+                    Scanner input2 = new Scanner(System.in);
+                    int i = 0;
+                    Ex2 ex2 = new Ex2();
+                    Ex1 p2 = new Ex1();
 
+                    int[][] notasTurma = {{10,12,16,11,19},
+                                          {10,10,10,10,10},
+                                          {11,12,13,14,15},
+                                          {8,9,12,7,5},
+                                          {7,6,4,18,15}};
+
+                    ex2.atualizaPauta(notasTurma);
+
+                    System.out.println("Selecione o índice da UC [0 a 4] sobre a qual quer saber a soma ds notas: ");
+                    int UC = input2.nextInt();
+                    int sumUc = ex2.somaUC(UC);
+                    float mediaUc = ex2.mediaNotasUc(UC);
+                    System.out.printf("A soma e média das notas da UC selecionada são: %d e %f", sumUc, mediaUc);
+
+                    System.out.println("Selecione o aluno [0 a 4] sobre o qual quer saber a média das notas: ");
+                    int aluno = input2.nextInt();
+                    float mediaAluno = ex2.mediaNotasAluno(aluno);
+                    System.out.println("A média das notas do aluno selecionado é: " + mediaAluno);
+
+                    int notaMaxima = ex2.notaMax();
+                    int notaMinima = ex2.notaMin();
+                    System.out.printf("A nota mais alta e mais baixa da pauta são: %d %d ", notaMaxima, notaMinima);
+
+
+                    System.out.println("Pretendo ver as notas acima do valor:");
+                    int valorlimite = input.nextInt();
+                    int[] acima = ex2.notasAcimaDe(valorlimite);
+                    System.out.println("O array dessas notas é: " + Arrays.toString(acima));
+
+
+                    int indexMax = ex2.indMaxUc();
+                    System.out.println("O índice da UC com maior média é: " + indexMax);
                     break;
 
                 case 3:

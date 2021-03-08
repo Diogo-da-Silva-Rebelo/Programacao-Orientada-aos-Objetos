@@ -32,6 +32,17 @@ public class Ex1 {
         return min;
     }
 
+    //dá o maximo elemento em formato float (usado no Ex2)
+    public float maxArray(float[] array) {
+        float max = Integer.MIN_VALUE;
+
+        //n guarda o conteúdo em casa índice do array
+        for (float n : array)
+            if (n > max) max = n;
+
+        return max;
+    }
+
     public int[] betweenArray(int[] array, int a, int b) {
         int[] newArray = new int[b - a + 1];
         int j = 0;
