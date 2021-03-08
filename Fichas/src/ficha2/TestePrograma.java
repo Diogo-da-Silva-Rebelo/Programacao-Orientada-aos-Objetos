@@ -69,7 +69,7 @@ public class TestePrograma {
 
                     int notaMaxima = ex2.notaMax();
                     int notaMinima = ex2.notaMin();
-                    System.out.printf("A nota mais alta e mais baixa da pauta são: %d %d ", notaMaxima, notaMinima);
+                    System.out.printf("A nota mais alta e mais baixa da pauta são: %d e %d\n", notaMaxima, notaMinima);
 
 
                     System.out.println("Pretendo ver as notas acima do valor:");
