@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class TestePrograma {
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         char c1 = 'S';
