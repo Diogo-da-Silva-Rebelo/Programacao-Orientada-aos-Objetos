@@ -45,12 +45,14 @@ public class TestePrograma {
                     Ex2 ex2 = new Ex2();
                     Ex1 p2 = new Ex1();
 
-                    int[][] notasTurma = {{10,12,16,11,19},
-                                          {10,10,10,10,10},
-                                          {11,12,13,14,15},
-                                          {8,9,12,7,5},
-                                          {7,6,4,18,15}};
+                    ex2.inicializaPauta();
 
+                    int[][] notasTurma = {
+                            {10,12,16,11,19},
+                            {10,10,10,10,10},
+                            {11,12,13,14,15},
+                            {8,9,12,7,5},
+                            {7,6,4,18,15}};
 
                     ex2.atualizaPauta(notasTurma);
 
@@ -58,7 +60,7 @@ public class TestePrograma {
                     int UC = input2.nextInt();
                     int sumUc = ex2.somaUC(UC);
                     float mediaUc = ex2.mediaNotasUc(UC);
-                    System.out.printf("A soma e média das notas da UC selecionada são: %d e %f", sumUc, mediaUc);
+                    System.out.printf("A soma e média das notas da UC selecionada são: %d e %f\n", sumUc, mediaUc);
 
                     System.out.println("Selecione o aluno [0 a 4] sobre o qual quer saber a média das notas: ");
                     int aluno = input2.nextInt();
