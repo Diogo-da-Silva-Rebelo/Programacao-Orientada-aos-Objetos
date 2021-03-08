@@ -1,5 +1,7 @@
 package ficha2;
 
+import java.util.Arrays;
+
 public class Ex2 {
 
     private final int[][] notasTurma = new int[5][5];
@@ -25,10 +27,13 @@ public class Ex2 {
         int[] todasNotasUc = new int[5];
         int k = 0;
         for (int i = uc; i < 5; i++) {
-            todasNotasUc[k] = this.notasTurma[i][uc];
+             todasNotasUc[k] = this.notasTurma[i][uc];
+            //getNotaAluno(k,uc);
             k++;
         }
+        System.out.println("Array é : "+ Arrays.toString(todasNotasUc));
         return todasNotasUc;
+
     }
 
     //devolve array de todas as notas de um aluno
@@ -37,8 +42,10 @@ public class Ex2 {
         int k = 0;
         for (int i = aluno; i < 5; i++) {
             todasNotasAluno[k] = this.notasTurma[aluno][i];
+            //getNotaAluno(aluno,k);
             k++;
         }
+
         return todasNotasAluno;
     }
 
@@ -109,18 +116,17 @@ public class Ex2 {
         return aux;
     }
 
-    /* Não utilizei aqui
     public void mostraString() {
-        String pauta = "";
         for (int i = 0; i < 5; i++) {
             System.out.printf(" Aluno nº %d: |", i + 1);
+            System.out.println("\n");
             for (int j = 0; j < 5; j++) {
                 System.out.printf(" -> UC nº %d: %d", j + 1, this.notasTurma[i][j]);
                 System.out.println("\n");
             }
             System.out.println("\n");
         }
-    } */
+    }
 
     /*
     public String calculaString() {

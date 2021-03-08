@@ -1,6 +1,5 @@
 package ficha2;
 
-import ficha1.Ficha1;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -41,9 +40,7 @@ public class TestePrograma {
                 case 2:
                     //2
                     Scanner input2 = new Scanner(System.in);
-                    int i = 0;
                     Ex2 ex2 = new Ex2();
-                    Ex1 p2 = new Ex1();
 
                     ex2.inicializaPauta();
 
@@ -51,16 +48,20 @@ public class TestePrograma {
                             {10,12,16,11,19},
                             {10,10,10,10,10},
                             {11,12,13,14,15},
-                            {8,9,12,7,5},
-                            {7,6,4,18,15}};
+                            {8 ,9 ,12, 7, 5},
+                            {7 ,6 ,4 ,18,15}
+                    };
 
                     ex2.atualizaPauta(notasTurma);
+                    System.out.println("Array é : "+ Arrays.deepToString(notasTurma) + "\n");
+                    ex2.mostraString();
 
-                    System.out.println("Selecione o índice da UC [0 a 4] sobre a qual quer saber a soma ds notas: ");
+                    System.out.println("Selecione o índice da UC [0 a 4] sobre a qual quer saber a soma das notas: ");
                     int UC = input2.nextInt();
                     int sumUc = ex2.somaUC(UC);
                     float mediaUc = ex2.mediaNotasUc(UC);
-                    System.out.printf("A soma e média das notas da UC selecionada são: %d e %f\n", sumUc, mediaUc);
+
+                    System.out.printf("A soma e média das notas da UC selecionada são: %d e %f\n\n", sumUc, mediaUc);
 
                     System.out.println("Selecione o aluno [0 a 4] sobre o qual quer saber a média das notas: ");
                     int aluno = input2.nextInt();
@@ -69,7 +70,7 @@ public class TestePrograma {
 
                     int notaMaxima = ex2.notaMax();
                     int notaMinima = ex2.notaMin();
-                    System.out.printf("A nota mais alta e mais baixa da pauta são: %d e %d\n", notaMaxima, notaMinima);
+                    System.out.printf("A nota mais alta e mais baixa da pauta são: %d e %d\n\n", notaMaxima, notaMinima);
 
 
                     System.out.println("Pretendo ver as notas acima do valor:");
@@ -80,6 +81,8 @@ public class TestePrograma {
 
                     int indexMax = ex2.indMaxUc();
                     System.out.println("O índice da UC com maior média é: " + indexMax);
+
+
                     break;
 
                 default:
