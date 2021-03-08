@@ -51,6 +51,7 @@ public class TestePrograma {
                                           {8,9,12,7,5},
                                           {7,6,4,18,15}};
 
+
                     ex2.atualizaPauta(notasTurma);
 
                     System.out.println("Selecione o índice da UC [0 a 4] sobre a qual quer saber a soma ds notas: ");
@@ -77,11 +78,6 @@ public class TestePrograma {
 
                     int indexMax = ex2.indMaxUc();
                     System.out.println("O índice da UC com maior média é: " + indexMax);
-                    break;
-
-                case 3:
-                    //3
-
                     break;
 
                 default:

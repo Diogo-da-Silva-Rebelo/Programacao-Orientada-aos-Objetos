@@ -1,6 +1,4 @@
 package ficha2;
-
-
 import ficha1.Ficha1;
 
 public class Ex2 {
