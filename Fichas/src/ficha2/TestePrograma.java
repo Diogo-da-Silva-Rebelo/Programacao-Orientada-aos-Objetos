@@ -76,12 +76,12 @@ public class TestePrograma {
                     System.out.println("Pretendo ver as notas acima do valor:");
                     int valorlimite = input.nextInt();
                     int[] acima = ex2.notasAcimaDe(valorlimite);
-                    System.out.println("O array dessas notas é: " + Arrays.toString(acima));
+                    System.out.println("O array dessas notas é: " + Arrays.toString(acima) + "\n");
 
 
-                    int indexMax = ex2.indMaxUc();
+                    //calcular media de cada UC e dar o indice maior
+                    int indexMax = ex2.ucMediaMaior();
                     System.out.println("O índice da UC com maior média é: " + indexMax);
-
 
                     break;
 

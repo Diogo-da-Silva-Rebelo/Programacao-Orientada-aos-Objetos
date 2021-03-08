@@ -1,6 +1,5 @@
 package ficha2;
 
-import java.util.Arrays;
 
 public class Ex2 {
 
@@ -16,22 +15,23 @@ public class Ex2 {
     }
 
     //diz uma nota a uma certa uc de um aluno especifico
+    //em comentário pois não é usado
+    /*
     public int getNotaAluno(int aluno, int uc) {
-        //Alunos-> linha
-        //UC's-> coluna
         return (this.notasTurma[aluno][uc]);
-    }
+    } */
 
     //devolve array de notas dos alunos de uma uc
     public int[] getNotasUc(int uc) {
         int[] todasNotasUc = new int[5];
-        int k = 0;
-        for (int i = uc; i < 5; i++) {
-             todasNotasUc[k] = this.notasTurma[i][uc];
-            //getNotaAluno(k,uc);
-            k++;
+
+       // System.arraycopy(this.notasTurma[k][uc], 0, todasNotasAluno, 0, 5);
+        for (int i = 0; i < 5; i++) {
+            for (int j = uc; j < 5; j++) {
+                todasNotasUc[i] = this.notasTurma[i][uc];
+            }
         }
-        System.out.println("Array é : "+ Arrays.toString(todasNotasUc));
+
         return todasNotasUc;
 
     }
@@ -39,12 +39,14 @@ public class Ex2 {
     //devolve array de todas as notas de um aluno
     public int[] getNotasAluno(int aluno) {
         int[] todasNotasAluno = new int[5];
-        int k = 0;
-        for (int i = aluno; i < 5; i++) {
-            todasNotasAluno[k] = this.notasTurma[aluno][i];
-            //getNotaAluno(aluno,k);
-            k++;
-        }
+
+        System.arraycopy(this.notasTurma[aluno], 0, todasNotasAluno, 0, 5);
+
+        /*for (int i = aluno; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                todasNotasAluno[j] = this.notasTurma[aluno][j];
+            }
+        } */
 
         return todasNotasAluno;
     }
@@ -59,12 +61,13 @@ public class Ex2 {
 
     public float mediaNotasAluno(int aluno) {
         int[] arrayNotas = getNotasAluno(aluno);
+
         int sum = 0;
         float media;
 
 
         for (int n : arrayNotas) sum += n;
-        media = ((float) sum) / 5;
+        media = ((float) sum) / (float) 5;
         return media;
     }
 
@@ -74,7 +77,7 @@ public class Ex2 {
         float media;
 
         for (int n : arrayNotas) sum += n;
-        media = ((float) sum) / 5;
+        media = ((float) sum) / (float) 5;
         return media;
     }
 
@@ -143,6 +146,25 @@ public class Ex2 {
     }
      */
 
+
+    public int ucMediaMaior() {
+        int indice = 0;
+        int media = 0;
+        int aux = 0;
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                aux += this.notasTurma[j][i];
+            }
+            if (aux > media) {
+                media = aux;
+                indice = i;
+            }
+        }
+        return indice;
+    }
+
+    //em comentário, pois não é usado
+    /*
     public int indMaxArray(float[] array) {
         Ex1 p1 = new Ex1();
         float max = p1.maxArray(array);
@@ -151,20 +173,7 @@ public class Ex2 {
         while (k < array.length && array[k] != max) k++;
 
         return k;
-    }
-
-    public int indMaxUc() {
-        float[] index = new float[5];
-        int k = 0;
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
-                index[k] = mediaNotasUc(j);
-                k++;
-            }
-        }
-
-        return (indMaxArray(index));
-    }
+    } */
 
     public void atualizaPauta(int[][] notas) {
         System.arraycopy(notas, 0, this.notasTurma, 0, this.notasTurma.length);

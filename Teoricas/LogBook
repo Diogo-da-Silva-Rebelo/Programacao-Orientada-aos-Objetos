@@ -167,3 +167,17 @@ aulas dá acesso à Sala).
 Introdução aos arrays em java:
 - Um array que contém em cada posição um aluno. O array será Aluno alunos[];
 - Há composição quando uma parte está incluida ou faz parte de outra (losango de composição).
+
+POO T - 8 mar
+- Ao imprimir um objeto, caso não tenhamos implementação, o java escreve por definição o nome da classe seguido de
+codigos em hex;
+- Strings em java são objetos emutáveis/ não dinâmicas;
+- Evitar utilizar String;
+- Utilizar StringBuilder!!
+- Implementar sempre um método equals daqui para a frente;
+- Se não tivermos nenhum dado/diagrama de classes -> assumimos que é composição e não agregação.
+- Só existe um objeto class por classe;
+
+
+
+
