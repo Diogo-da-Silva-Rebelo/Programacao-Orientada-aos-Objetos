@@ -17,7 +17,8 @@ public class Ex1 {
 
         for (int elem : array) {
             System.out.printf("Introduza o %dº valor: ", k + 1);
-            array[k++] = input.nextInt();
+            array[k] = input.nextInt();
+            k++;
         }
         return array;
     }
@@ -65,7 +66,8 @@ public class Ex1 {
         for (int n1 : one) {
             for (int n2 : two) {
                 if (n1 == n2) {
-                    newArray[k++] = n1;
+                    newArray[k] = n1;
+                    k++;
                     break;
                 }
             }
