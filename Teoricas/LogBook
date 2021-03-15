@@ -243,3 +243,14 @@ codigos em hex;
 - Implementar sempre um método equals daqui para a frente;
 - Se não tivermos nenhum dado/diagrama de classes -> assumimos que é composição e não agregação.
 - Só existe um objeto class por classe;
+
+POO T 15 mar
+- Iterador: método utilizado para percorrer todos os elementos de uma lista.
+- Para defini-lo é preciso:
+ -> forma de aceder a qualquer elemento;
+ -> forma de avançar o iterador;
+ -> forma de percorrer uma estutura de dados, sem recorrer à sua estrutura interna;
+- Com o iterator ganhamos com o facto de podermos visitar qualquer estrutura, sem saber o que se passa nela. Assim, pode
+-se mudar o tipo de dados e o código continua operacional.
+
+- Iteradores podem ser internos ou externos, consoante a procura se dê dentro ou fora da coleção.
