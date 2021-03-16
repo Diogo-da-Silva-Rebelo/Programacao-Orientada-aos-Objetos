@@ -1,6 +1,5 @@
 package ficha2;
-
-
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -83,6 +82,25 @@ public class TestePrograma {
                     int indexMax = ex2.ucMediaMaior();
                     System.out.println("O índice da UC com maior média é: " + indexMax);
 
+                    break;
+                case 3:
+                    Ex3 ex3 = new Ex3(4);
+
+                    //Inserção
+                    ex3.insereDatas(LocalDate.now());
+                    System.out.println("Inserção da data de hoje.");
+                    ex3.insereDatas(LocalDate.of(2021,10,2));
+                    System.out.println("Inserção da data 02-10-2021.");
+                    ex3.insereDatas(LocalDate.of(2021,11,2));
+                    System.out.println("Inserção da data 02-11-2021.");
+                    ex3.insereDatas(LocalDate.of(2001,1,19));
+                    System.out.println("Inserção da data de aniverśario do Purp.");
+
+                    //Cálculo da data mais próxima do aniverśario do Purp
+                    LocalDate datamProx = ex3.dataMaisProxima(LocalDate.of(2021,1,19));
+                    System.out.println("A data mais próxima do aniv do Purp é: " + datamProx.toString());
+
+                    System.out.println("\nO array de datas inseridas é: " + ex3.toString() + "\n");
                     break;
 
                 default:
