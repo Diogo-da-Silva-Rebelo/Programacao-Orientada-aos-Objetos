@@ -84,6 +84,7 @@ public class TestePrograma {
 
                     break;
                 case 3:
+                    //3
                     Ex3 ex3 = new Ex3(4);
 
                     //Inserção
@@ -101,6 +102,18 @@ public class TestePrograma {
                     System.out.println("A data mais próxima do aniv do Purp é: " + datamProx.toString());
 
                     System.out.println("\nO array de datas inseridas é: " + ex3.toString() + "\n");
+                    break;
+                case 4:
+                    //4
+                    Scanner x = new Scanner(System.in);
+
+                    int[] experiment = {10,42,45,87,567,172,129,116,114,166};
+                    Ex4 ex4 = new Ex4(experiment);
+
+                    System.out.println("O seu array ordenado é: " + Arrays.toString(ex4.ordena()));
+                    System.out.println("Introduza o elemento a procurar: ");
+                    int elem = x.nextInt();
+                    System.out.println("Busca Binária \n [Valor negativo? Não existe] \n [Valor positivo? Índice]\n-> "+ ex4.procuraB(elem));
                     break;
 
                 default:
