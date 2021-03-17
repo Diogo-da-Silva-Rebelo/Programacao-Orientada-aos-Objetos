@@ -113,7 +113,12 @@ public class TestePrograma {
                     System.out.println("O seu array ordenado é: " + Arrays.toString(ex4.ordena()));
                     System.out.println("Introduza o elemento a procurar: ");
                     int elem = x.nextInt();
-                    System.out.println("Busca Binária \n [Valor negativo? Não existe] \n [Valor positivo? Índice]\n-> "+ ex4.procuraB(elem));
+                    System.out.println("Busca Binária \n " +
+                            "[Valor negativo? Não existe]\n " +
+                            "[Valor positivo? Índice]\n-> "+ ex4.procuraB(elem));
+                    break;
+                case 5:
+
                     break;
 
                 default:
