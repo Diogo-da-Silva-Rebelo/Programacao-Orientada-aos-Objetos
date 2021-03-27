@@ -1,5 +1,6 @@
 package ficha2;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -101,7 +102,7 @@ public class TestePrograma {
                     LocalDate datamProx = ex3.dataMaisProxima(LocalDate.of(2021,1,19));
                     System.out.println("A data mais próxima do aniv do Purp é: " + datamProx.toString());
 
-                    System.out.println("\nO array de datas inseridas é: " + ex3.toString() + "\n");
+                    System.out.println("\nO array de datas inseridas é: " + ex3 + "\n");
                     break;
                 case 4:
                     //4
@@ -118,7 +119,25 @@ public class TestePrograma {
                             "[Valor positivo? Índice]\n-> "+ ex4.procuraB(elem));
                     break;
                 case 5:
+                    Ex5 ex5 = new Ex5();
+                    System.out.println("Insert Strings separated by spaces [put a repetition for test]: ");
+                    ex5.readString();
+                    String[] stringArray = ex5.stoArrayStrings();
+                    System.out.println("Your array of strings is: " + Arrays.toString(stringArray));
 
+                    String[] stringNoRep = ex5.noRepetitions(stringArray);
+                    System.out.println("Inserted string with no repetitions is: " + Arrays.toString(stringNoRep) + "\n");
+
+                    String biggerString = ex5.greaterString(stringNoRep);
+                    System.out.println("Bigger inserted string is: " + biggerString + "\n");
+
+                    ArrayList<String> dup = ex5.dupStrings(stringArray);
+                    System.out.println("Array of repetitions: " + dup + "\n");
+
+                    System.out.println("Put the string whose number of times you want to know: ");
+                    String s = input.next();
+                    int numberOfRep = ex5.numberRep(stringArray,s);
+                    System.out.printf("Inserted String shows up %d times.\n",numberOfRep);
                     break;
 
                 default:
