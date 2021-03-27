@@ -2,6 +2,7 @@ package ficha2;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class TestePrograma {
@@ -168,24 +169,28 @@ public class TestePrograma {
                     //7
                     Ex7 ex7 = new Ex7();
 
-                    ex7.generateKey();
+                    ex7.generateNKey2();
+                    ex7.generateSKey2();
                     System.out.println("Next key was generated: \n" +  ex7);
+                    ex7.keySort();
+                    System.out.println("Next key was generated was sorted: \n" +  ex7);
 
                     int[] numbers = ex7.readNumbers();
                     int[] stars = ex7.readStars();
-                    System.out.println("Key inserted with sucess. \n");
+                    System.out.println("Key inserted with sucess: \n" + "Numbers: " + Arrays.toString(numbers) + "\nStars:   " + Arrays.toString(stars));
 
-                    int[] matchingNumbers = ex7.compareNumbers(numbers);
-                    int[] matchingStars = ex7.compareStars(stars);
-                    System.out.println("Comparing...Done.");
-                    System.out.println("Matching numbers/stars appearing bellow: \n" + Arrays.toString(matchingNumbers) + "\n" + Arrays.toString(matchingStars));
+                    int[] userNumbersSorted = ex7.userNumberSort(numbers);
+                    int[] userStarsSorted = ex7.userStarSort(stars);
+                    System.out.println("Key inserted was sorted: \n" + "Numbers: " + Arrays.toString(userNumbersSorted) + "\nStars:   " + Arrays.toString(userStarsSorted));
 
-
-
-
-
-
+                    System.out.println("\nComparing...");
+                    int [] correctNumbers = ex7.compareNumbers(numbers);
+                    int[] correctStars = ex7.compareStars(stars);
+                    System.out.println("Done.");
+                    System.out.println("Matching numbers & stars appearing bellow: \n" + "\nNumbers:  "+ Arrays.toString(correctNumbers) + "\nStars:    " + Arrays.toString(correctStars));
+                    ex7.checkAllKey(correctNumbers,correctStars);
                     break;
+
                 default:
                     System.out.println("Input inválido.");
             }
