@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/*
 public class Stack {
     private List<String> stack;
 
@@ -37,7 +36,7 @@ public class Stack {
         return this.stack.size();
     }
 
-    public Stack(obj) {
+    public Stack(Stack obj) {
         this.stack = obj.getStack();
     }
 
@@ -67,4 +66,3 @@ public class Stack {
         return this.stack.toString();
     }
 }
- */

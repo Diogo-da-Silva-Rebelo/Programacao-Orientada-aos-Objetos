@@ -6,7 +6,7 @@ public class Ex1 {
     private double raio;
 
     public Ex1(){
-        x = y = raio = 0;
+        this.x = this.y = this.raio = 0;
     }
 
     public Ex1(double x, double y, double raio){
@@ -45,22 +45,22 @@ public class Ex1 {
         this.raio = raio;
     }
 
-    public void alteraCentro(double x, double y){
+    public void alteraCentro(double x, double y) {
         this.x = x;
         this.setY(y);
     }
 
-    public double calculaArea(){
-        return Math.PI*Math.pow(this.raio,2);
+    public double calculaArea() {
+        return Math.PI * Math.pow(this.raio, 2);
     }
 
-    public double calculaPerimetro(){
-        return Math.PI*2*this.raio;
+    public double calculaPerimetro() {
+        return Math.PI * 2 * this.raio;
     }
 
-    public boolean equals(Object o){
+    public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || this.getClass() != o.getClass()){
+        if (o == null || this.getClass() != o.getClass()) {
             return false;
         }
 
@@ -82,5 +82,4 @@ public class Ex1 {
                 ", raio=" + raio +
                 '}';
     }
-
 }
