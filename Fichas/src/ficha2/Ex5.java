@@ -1,6 +1,6 @@
 package ficha2;
 
-
+import org.jetbrains.annotations.NotNull;
 import java.util.*;
 
 public class Ex5 {
@@ -56,7 +56,7 @@ public class Ex5 {
         return duplicate;
     }
 
-    public int numberRep(String[] array, String lookup) {
+    public int numberRep(String @NotNull [] array, String lookup) {
         int numberOfRep = 0;
 
         for (String s : array) {

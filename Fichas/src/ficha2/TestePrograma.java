@@ -119,6 +119,7 @@ public class TestePrograma {
                             "[Valor positivo? Índice]\n-> "+ ex4.procuraB(elem));
                     break;
                 case 5:
+                    //5
                     Ex5 ex5 = new Ex5();
                     System.out.println("Insert Strings separated by spaces [put a repetition for test]: ");
                     ex5.readString();
@@ -140,6 +141,51 @@ public class TestePrograma {
                     System.out.printf("Inserted String shows up %d times.\n",numberOfRep);
                     break;
 
+                case 6:
+                    //6
+                    Scanner n = new Scanner(System.in);
+                    Ex6 ex6 = new Ex6();
+                    ex6.readMatrixByUser();
+
+                    int[][] initialMatrix = ex6.getMatrix();
+
+                    System.out.println("Insert nº of rows & cols of matrix you want to sum with:  ");
+                    int rows = n.nextInt();
+                    int cols = n.nextInt();
+
+                    System.out.println("Insert matrix you want to sum with:  ");
+                    int[][] finalSum = ex6.sumMatrix(rows,cols);
+                    System.out.println("Final matrix is: " + Arrays.deepToString(finalSum));
+
+                    ex6.setMatrixOne(initialMatrix);
+                    System.out.println("Matrix 1 & 2 are equals ? Answer: " + ex6.matrixEquals(finalSum));
+
+                    int [][] oppositeMatrix = ex6.ConMatrix();
+                    System.out.println("The Opposite Matrix of the initial one is: " + Arrays.deepToString(oppositeMatrix));
+                    break;
+
+                case 7:
+                    //7
+                    Ex7 ex7 = new Ex7();
+
+                    ex7.generateKey();
+                    System.out.println("Next key was generated: \n" +  ex7);
+
+                    int[] numbers = ex7.readNumbers();
+                    int[] stars = ex7.readStars();
+                    System.out.println("Key inserted with sucess. \n");
+
+                    int[] matchingNumbers = ex7.compareNumbers(numbers);
+                    int[] matchingStars = ex7.compareStars(stars);
+                    System.out.println("Comparing...Done.");
+                    System.out.println("Matching numbers/stars appearing bellow: \n" + Arrays.toString(matchingNumbers) + "\n" + Arrays.toString(matchingStars));
+
+
+
+
+
+
+                    break;
                 default:
                     System.out.println("Input inválido.");
             }
