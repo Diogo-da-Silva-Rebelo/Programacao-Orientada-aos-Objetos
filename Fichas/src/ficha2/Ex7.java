@@ -26,23 +26,21 @@ public class Ex7 {
         int[] randNumber = new int[5];
         int[] randStar = new int[2];
 
-        for (int i=0;i<5;i++)
-            randNumber[i]= ThreadLocalRandom.current().nextInt(1,50);
-        System.arraycopy(randNumber,0,this.numbers,0,5);
-        for (int j=0;j<2;j++)
-            randStar[j]= ThreadLocalRandom.current().nextInt(1,9);
-        System.arraycopy(randStar,0,this.stars,0,2);
+        for (int i = 0; i < 5; i++)
+            randNumber[i] = ThreadLocalRandom.current().nextInt(1, 50);
+        System.arraycopy(randNumber, 0, this.numbers, 0, 5);
+        for (int j = 0; j < 2; j++)
+            randStar[j] = ThreadLocalRandom.current().nextInt(1, 9);
+        System.arraycopy(randStar, 0, this.stars, 0, 2);
     }
 
     //theres no repetition
-    public void generateNKey2(){
+    public void generateNKey2() {
         ArrayList<Integer> list = new ArrayList<>(50);
-        for(int i=1;i<=50;i++){
+        for (int i = 1; i <= 50; i++) {
             list.add(i);  // list contains: [1,2,3,4,5,6,7,8,...,50]
         }
         Collections.shuffle(list); // list now contains: [9, 3, 1, 5, 8, 7, 2, 6, 4,...]
-
-
 
         int[] numbersAllArray = new int[list.size()];
 
@@ -51,12 +49,12 @@ public class Ex7 {
             numbersAllArray[i] = list.get(i);
 
         int[] numbersArray = Arrays.copyOfRange(numbersAllArray, 0, 5);
-        this.numbers = Arrays.copyOf(numbersArray,5);
+        this.numbers = Arrays.copyOf(numbersArray, 5);
     }
 
-    public void generateSKey2(){
+    public void generateSKey2() {
         ArrayList<Integer> list = new ArrayList<>(9);
-        for(int i=1;i<=9;i++){
+        for (int i = 1; i <= 9; i++) {
             list.add(i);  // list contains: [1,2,3,4,5,6,7,8,...,50]
         }
         Collections.shuffle(list); // list now contains: [9, 3, 1, 5, 8, 7, 2, 6, 4,...]
@@ -69,7 +67,7 @@ public class Ex7 {
             starsAllArray[i] = list.get(i);
 
         int[] starsArray = Arrays.copyOfRange(starsAllArray, 0, 2);
-        this.stars = Arrays.copyOf(starsArray,2);
+        this.stars = Arrays.copyOf(starsArray, 2);
     }
 
     public int[] readNumbers() {
