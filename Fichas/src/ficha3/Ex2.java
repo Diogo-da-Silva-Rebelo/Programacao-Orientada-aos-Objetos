@@ -24,13 +24,13 @@ public class Ex2 {
         this.displayY = 0;
         this.numMessages = 0;
         this.messageStorage = 0;
-        this.messages = new ArrayList<String>(numMessages);
+        this.messages = new ArrayList<>(numMessages);
         this.photoStorage = 1024;
         this.appStorage = 2048;
         this.usedStorage = 0;
         this.numStoredPhotos = 0;
         this.numInstalledApps = 0;
-        this.installedApps = new ArrayList<String>(numInstalledApps);
+        this.installedApps = new ArrayList<>(numInstalledApps);
     }
 
     public Ex2 (String brand, String model, int dx, int dy, int numMessages, int messageStorage, ArrayList<String> messages, int photoStorage, int appStorage, int usedStorage, int numStoredPhotos, int numInstalledApps, ArrayList<String> installedApps) {
@@ -39,14 +39,14 @@ public class Ex2 {
         this.displayX = dx;
         this.displayY = dy;
         this.messageStorage = messageStorage;
-        this.messages = new ArrayList<String>(numMessages);
+        this.messages = new ArrayList<>(numMessages);
         this.numMessages = numMessages;
         this.photoStorage = photoStorage;
         this.appStorage = appStorage;
         this.usedStorage = usedStorage;
         this.numStoredPhotos = numStoredPhotos;
         this.numInstalledApps = numInstalledApps;
-        this.installedApps = new ArrayList<String>(numInstalledApps);
+        this.installedApps = new ArrayList<>(numInstalledApps);
     }
 
     public Ex2(Ex2 phone) {
@@ -56,7 +56,8 @@ public class Ex2 {
         this.displayY = phone.getDisplayY();
         this.numMessages = phone.getNumMessages();
         this.messageStorage = phone.getMessageStorage();
-        this.messages = new ArrayList<String>(phone.getMessages().size());
+        this.photoAndAppStorage = phone.getPhotoAndAppStorage();
+        this.messages = new ArrayList<>(phone.getMessages().size());
         this.photoStorage = phone.getPhotoStorage();
         this.appStorage = phone.getAppStorage();
         this.usedStorage = phone.getUsedStorage();
@@ -118,7 +119,7 @@ public class Ex2 {
     }
 
     public void setMessages(ArrayList<String> messages) {
-        this.messages = new ArrayList<String>(messages.size());
+        this.messages = new ArrayList<>(messages.size());
         this.messages.addAll(messages);
     }
 
@@ -177,7 +178,7 @@ public class Ex2 {
 
     public void setInstalledApps(int numInstalledApps, ArrayList<String> installedApps) {
         this.numInstalledApps = numInstalledApps;
-        this.installedApps = new ArrayList<String>(numInstalledApps);
+        this.installedApps = new ArrayList<>(numInstalledApps);
         this.installedApps.addAll(installedApps);
     }
 
