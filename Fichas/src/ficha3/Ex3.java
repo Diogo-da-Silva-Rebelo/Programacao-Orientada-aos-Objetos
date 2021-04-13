@@ -135,13 +135,12 @@ public class Ex3 {
         this.likes++;
     }
 
-    public String process(){
+    public void process(){
         //Temos uma lista de inteiros (0 ou 1), vamos:
         //1. Juntar todos este 0's e 1's
         //2. Colocá-los num ficheiro de texto
        creatNewFile();
        writeInFile();
-       return getContent();
     }
 
     public void creatNewFile(){
