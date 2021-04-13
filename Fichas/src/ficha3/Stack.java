@@ -42,24 +42,25 @@ public class Stack {
 
     public List<String> getStack() {
         List<String> res = new ArrayList<>(stack.size());
-        for (String s : this.stack) res.add(s);
+        res.addAll(this.stack);
         return res;
     }
 
     public void setStack(List<String> stk) {
         this.stack = new ArrayList<>();
-        for (String s : stk) this.stack.add(s);
+        this.stack.addAll(stk);
     }
 
     public Stack clone() {
         return new Stack(this);
     }
 
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != this.getClass()) return false;
-        Stack obj = (Stack) o;
-        return Objects.equals(stack, obj.stack);
+        if (!(o instanceof Stack)) return false;
+        Stack stack1 = (Stack) o;
+        return Objects.equals(getStack(), stack1.getStack());
     }
 
     public String toString() {
