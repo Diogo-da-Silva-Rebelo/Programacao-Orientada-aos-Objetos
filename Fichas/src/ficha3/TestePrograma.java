@@ -1,6 +1,8 @@
 package ficha3;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class TestePrograma {
@@ -79,6 +81,19 @@ public class TestePrograma {
 
                     System.out.println("User decided to check messages!" + phone.getMessages());
                     System.out.println("Biggest message is: " + phone.biggestMessage());
+                    break;
+                case 3:
+                    Ex3 yt = new Ex3("Skincare Routine", "0101010001110110", LocalDate.of(2021,2,12), 1080, 3600, new ArrayList<>(),300,10);
+                    System.out.println("New video called " + yt.getVideoName() + " created with success!\n");
+                    yt.thumbsUp();
+                    yt.insertComment("OMG! SOOO COOL");
+                    yt.insertComment("dope!");
+                    yt.insertComment("I need to get that brush!");
+                    System.out.println("Video was uploaded " + yt.howManyDaysAfter() + " days ago.\n");
+                    System.out.println("Comment List is: \n" + yt.getComments() + "\n");
+                    System.out.println("Final Video Characteristics:\n" + yt);
+                    yt.process();
+                    //don't forget to see new file created!
                     break;
                 case 9:
                     Ponto a2 = new Ponto(0,0);
