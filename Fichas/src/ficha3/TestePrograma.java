@@ -95,6 +95,9 @@ public class TestePrograma {
                     yt.process();
                     //don't forget to see new file created!
                     break;
+                case 4:
+                    //finish
+                    break;
                 case 9:
                     Ponto a2 = new Ponto(0,0);
                     Ponto b2 = new Ponto(0,2);
