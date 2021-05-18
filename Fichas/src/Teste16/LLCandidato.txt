@@ -1,0 +1,12 @@
+//implementação de uma lista ligada de Candidatos
+public class Node{
+    Candidato candidado;
+    Node prox;
+}
+
+public class LLCandidato {
+    private Node primeiro;
+    private int size;
+
+
+}
