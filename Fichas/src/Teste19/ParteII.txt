@@ -114,7 +114,7 @@ public Map<String, Set<String>> clientesPorImovel(){
     4. colocar num Map < CodCliente, <CodImoveis>>;
     */
 
-    Map<String, Set<String>> CPerSet = new HashMap<>();
+    Map<String, Set<String>> CPerSet = new HashMap<String,Set<String>>();
     for (Cliente c : this.clientes.values()){
         List<Aluguer> listA = c.getmeusAlugueres();
         Set<String> CodImovelSet = new HashSet<>();
