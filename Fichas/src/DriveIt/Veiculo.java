@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 public class Veiculo {
-   private String registration;
+    private String registration;
     private String brand;
     private String model;
     private int year;
