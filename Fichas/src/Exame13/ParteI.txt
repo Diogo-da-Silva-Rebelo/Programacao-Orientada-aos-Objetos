@@ -18,6 +18,7 @@ private TreeMap<String, ArrayList<Mensagem>> msgBox;
 //1
 //a
 public MsgMap(MsgMap mapMessage){
+super(mapMessage);
 this.msgBox = mapMessage.getMsgBox();
 }
 
@@ -67,7 +68,7 @@ this.msg.Box().values().stream().removeIf(e -> e.getAssunto().equals(palavra));
 }
 
 //e
-//Função que criar uma lista com todas as mensagens
+//Função que cria uma lista com todas as mensagens
 public List<Mensagens> totalMensagens(Map<String, ArrayList<Mensagem>> msgBox){
 new List<Mensagem> newList = new ArrayList<>();
 for (ArrayList<Mensagem> msg : msgBox.values()){
