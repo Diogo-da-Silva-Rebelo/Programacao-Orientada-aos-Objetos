@@ -1,0 +1,87 @@
+//Esta parte é alusiva às questões de desenvolvimento de código
+
+public class Episodio {
+    private String nome;
+    private double duracao;
+    private int classificacao; //dada pelos seus ouvintes (valor de 0..100)
+    private List<String> conteudo; //corresponde ao texto que e’ dito
+    //quando se reproduz o episodio
+    private int numeroVezesTocada; //qts vezes e’ que o podcast foi ouvido
+    private LocalDateTime ultimaVez; //regista quando foi reproduzido
+    //ultima vez
+...
+...
+}
+
+
+public class Podcast{
+    Map<String, List<Episodio>> EpiPorPodcast;
+    ...
+
+}
+
+public class Utilizador{
+    private String email;
+    private String nome;
+    private List<Podcast> subscritos;
+    ...
+}
+
+public class SpotifyPOO extends Podcast{
+    private List<Utilizador> utilizadores;
+    ...
+
+    //6
+    /*
+    //Se não houvesse composição
+    public List<Episodio> getEpisodios(String nomePodcast){
+        for (Podcast p : podcasts.KeySet){
+            if (p.getNomeId().equals(nomePodcast)) {
+            List<Episodio> epiList = this.podcasts.get(p);
+            epiList.stream().map(Episodio::clone).collect(Collectors.toList());
+            }
+        }
+        return epiList;
+    }
+    */
+
+    //"Numa lógica de composição"
+     public List<Episodio> getEpisodios(String nomePodcast){
+     return (this.getEpiPorPodcast().get(nomePodcast).stream().map(Episodio::clone).collect(Collectors.toList()));
+     }
+
+    //8
+    public void remove(String nomeP) throws PodcastInexistente, PodcastSubscrito {
+        if (this.getEpiPorPodcast().get(nomeP) == null)
+            throws new PodcastInexistente();
+        else {
+            for (Utilizador u : this.utilizadores){
+                for (Podcast p: u.getSubscritos()){
+                    if (p.getNome.equals(nomeP)) throws new PodcastSubscrito();
+                }
+            }
+            this.getEpiPorPodcast().remove(nomeP);
+        }
+    }
+
+    //9
+    public Episodio getEpisodioMaisLongo(String u){
+        for (Utilizador user : this.utilizadores){
+            if(user.getNome().equals(u)){
+                for (Podcast p : user.getSubscritos()){
+                //passar p à função getmaxEpisode(lista de episodios) que dá o episodio mais longo de um Podcast
+                //adicionar a uma lista todos
+                //passar p à getmaxEpisode(novalista)
+                //retornar o ínidice 0
+                }
+            }
+
+        }
+        return maxEpisode;
+    }
+
+
+}
+
+
+
