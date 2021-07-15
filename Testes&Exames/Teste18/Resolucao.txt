@@ -57,13 +57,3 @@ public Map<String,List<Ticket> ticketsPorTecnico(){
         return new_map;
     }
 }
-
-(d)
-public String supervisorTop(){
-   Map<String,<Ticket>> ticketsPerTec = ticketsPorTecnico();
-
-   for (String ident : this.equipa.get
-   for(
-
-           }
-}
